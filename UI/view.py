@@ -25,7 +25,7 @@ class View(ft.UserControl):
         #ROW 1
         self._dd_anno = ft.Dropdown(label="anno", width = 150, options = [])
         self._dd_brand = ft.Dropdown(label="brand", width = 150, options = [])
-        self._dd_retailer = ft.Dropdown(label="retailer", width=400, options= [])
+        self._dd_retailer = ft.Dropdown(label="retailer", width=450, options= [])
         self._controller.populated_dd_anno()
         self._controller.populated_dd_brand()
         self._controller.populated_dd_retailer()
@@ -41,8 +41,8 @@ class View(ft.UserControl):
         self._page.controls.append(row2)
 
         # List View where the reply is printed
-        self.txt_result = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
-        self._page.controls.append(self.txt_result)
+        self.lst_result = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
+        self._page.controls.append(self.lst_result)
         self._page.update()
 
     @property
